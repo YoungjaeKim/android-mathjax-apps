@@ -66,6 +66,7 @@ implements View.OnClickListener
 		setContentView(R.layout.main);
 		WebView w = (WebView) findViewById(R.id.webview);
 		w.getSettings().setJavaScriptEnabled(true);
+		w.addJavascriptInterface(new WebAppInterface(this), "Android");
 		w.getSettings().setBuiltInZoomControls(true);
 		w.loadDataWithBaseURL("http://bar", "<script type='text/x-mathjax-config'>"
 		                      +"MathJax.Hub.Config({ " 
@@ -77,7 +78,14 @@ implements View.OnClickListener
 							  +"});</script>"
 		                      +"<script type='text/javascript' "
 							  +"src='file:///android_asset/MathJax/MathJax.js'"
-							  +"></script><span id='math'></span>","text/html","utf-8","");
+							  +"></script>" +
+							  "<script type='text/javascript'>" +
+							    "function showAndroidToast1() {" +
+							     "   Android.onClick1('1 clicked'); " +
+							    "}" +
+							"</script>" +
+							   
+							  "<span id='math' onclick='showAndroidToast1()'></span>","text/html","utf-8","");
 		EditText e = (EditText) findViewById(R.id.edit);
 		e.setBackgroundColor(Color.LTGRAY);
 		e.setTextColor(Color.BLACK);
@@ -93,5 +101,7 @@ implements View.OnClickListener
 		t.setText(Html.fromHtml(t.getText().toString()));	
 		
 	}
+    
+    
 }
 

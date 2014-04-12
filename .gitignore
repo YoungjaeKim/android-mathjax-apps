@@ -1,0 +1,13 @@
+MathJaxApp/full/bin/AndroidManifest.xml
+*.apk
+MathJaxApp/full/bin/classes/edu/jsu/leathrum/android/mathjaxapp/full/MainActivity.class
+*.class
+*.ap_
+MathJaxApp/full/bin/classes/edu/jsu/leathrum/android/mathjaxapp/full/R$array.class
+MathJaxApp/full/gen/edu/jsu/leathrum/android/mathjaxapp/full/R.java
+*.classpath
+MathJaxApp/full/bin/R.txt
+MathJaxApp/full/bin/dexedLibs/android-support-v4-4f9218fe21f978780028a5611248a8c5.jar
+MathJaxApp/full/bin/dexedLibs/android-support-v7-appcompat-c7e3539e8b4bb8276c23e528ff5f6801.jar
+MathJaxApp/full/bin/dexedLibs/appcompat_v7-ba256d9243c8beeece1009c6888a4da3.jar
+MathJaxApp/full/gen/android/support/v7/appcompat/R.java

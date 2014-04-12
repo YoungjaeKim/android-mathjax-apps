@@ -1,20 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">MathJax App - Full</string>
-	<string name="enter_tex">Enter TeX here:</string>
-	<string name="show">Show</string>
-	<string name="clear">Clear</string>
-	<string name="example">Example</string>
-		
-	<string-array name="tex_examples">
-		<item>\\int_{-\\infty}^{\\infty} e^{-x^2}\\, dx = \\sqrt{\\pi}</item>
-		<item>\\sum_{n=1}^{\\infty}\\frac1{n^2}=\\frac{\\pi^2}6</item>
-		<item>\\int_a^b f(x)\\, dx = F(b) - F(a)\\ \\text{where}\\ F\'(x)=f(x)</item>
-		<item>\\left[\\begin{array}{cc}\\cos\\theta &amp; \\sin\\theta \\\\ \\sin\\theta &amp; -\\cos\\theta \\end{array}\\right]</item>
-		<item>\\iint_D (\\vec\\nabla\\times\\vec F)\\cdot\\vec n\\ dS = \\oint_{\\partial D} \\vec F\\cdot d\\vec r</item>
-		<item>x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}</item>
-		<item>f(z_0)= \\frac1{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-z_0} dz</item>
-	</string-array>
-	<string name="links">Links: &lt;a href=\"http://www.mathjax.org\">MathJax.org&lt;/a> || &lt;a href=\"http://www.mathjax.org/docs/2.0/tex.html\">TeX support&lt;/a> || &lt;a href=\"http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm\">commands with examples&lt;/a></string> 
-	
+
+    <string name="app_name">MathJax App - Full</string>
+    <string name="enter_tex">Enter TeX here:</string>
+    <string name="show">Show</string>
+    <string name="clear">Clear</string>
+    <string name="example">Example</string>
+
+    <string-array name="tex_examples">
+        <item>\\int_{-\\infty}^{\\infty} e^{-x^2}\\, dx = \\sqrt{\\pi}</item>
+        <item><math display="block">
+                <mrow>
+                    <mi mathvariant="normal">&amp;pi;</mi>
+
+                    <mo>≈</mo>
+
+                    <mfrac>
+                        <mn>355</mn>
+                        <mn>113</mn>
+                    </mfrac>
+                </mrow>
+            </math></item>
+        <item>\\sum_{n=1}^{\\infty}\\frac1{n^2}=\\frac{\\pi^2}6</item>
+        <item><math>
+                <mi>p</mi>
+
+                <mo stretchy="false">(</mo>
+
+                <mi>l</mi>
+
+                <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                </mrow>
+
+                <mi>s</mi>
+
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+
+                <mfrac>
+                    <mrow>
+                        <mi>e</mi>
+                        <mi>x</mi>
+                        <mi>p</mi>
+
+                        <mo stretchy="false">[</mo>
+
+                        <mi>s</mi>
+                        <mi>c</mi>
+                        <mi>o</mi>
+                        <mi>r</mi>
+                        <mi>e</mi>
+
+                        <mo stretchy="false">(</mo>
+
+                        <mi>l</mi>
+
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mo stretchy="false">|</mo>
+                        </mrow>
+
+                        <mi>s</mi>
+
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">]</mo>
+                    </mrow>
+                    <mrow>
+                        <munder>
+                            <mo>&#x2211; <!-- ∑ -->
+                            </mo>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <msup>
+                                    <mi>l</mi>
+
+                                    <mo>&#x2032;</mo>
+                                </msup>
+                            </mrow>
+                        </munder>
+
+                        <mi>e</mi>
+                        <mi>x</mi>
+                        <mi>p</mi>
+
+                        <mo stretchy="false">[</mo>
+
+                        <mi>s</mi>
+                        <mi>c</mi>
+                        <mi>o</mi>
+                        <mi>r</mi>
+                        <mi>e</mi>
+
+                        <mo stretchy="false">(</mo>
+
+                        <msup>
+                            <mi>l</mi>
+
+                            <mo>&#x2032;</mo>
+                        </msup>
+
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mo stretchy="false">|</mo>
+                        </mrow>
+
+                        <mi>s</mi>
+
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">]</mo>
+                    </mrow>
+                </mfrac>
+
+                <mo>=</mo>
+
+                <mfrac>
+                    <mrow>
+                        <mi>e</mi>
+                        <mi>x</mi>
+                        <mi>p</mi>
+
+                        <mo stretchy="false">[</mo>
+
+                        <munderover>
+                            <mo>&#x2211; <!-- ∑ -->
+                            </mo>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>j</mi>
+
+                                <mo>=</mo>
+
+                                <mn>1</mn>
+                            </mrow>
+
+                            <mi>m</mi>
+                        </munderover>
+                        <munderover>
+                            <mo>&#x2211; <!-- ∑ -->
+                            </mo>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>i</mi>
+
+                                <mo>=</mo>
+
+                                <mn>1</mn>
+                            </mrow>
+
+                            <mi>n</mi>
+                        </munderover>
+
+                        <msub>
+                            <mi>&#x03BB; <!-- λ -->
+                            </mi>
+                            <mi>j</mi>
+                        </msub>
+                        <msub>
+                            <mi>f</mi>
+                            <mi>j</mi>
+                        </msub>
+
+                        <mo stretchy="false">(</mo>
+
+                        <mi>s</mi>
+
+                        <mo>,</mo>
+
+                        <mi>i</mi>
+
+                        <mo>,</mo>
+
+                        <msub>
+                            <mi>l</mi>
+                            <mi>i</mi>
+                        </msub>
+
+                        <mo>,</mo>
+
+                        <msub>
+                            <mi>l</mi>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>i</mi>
+
+                                <mo>&#x2212; <!-- − -->
+                                </mo>
+
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">]</mo>
+                    </mrow>
+                    <mrow>
+                        <munder>
+                            <mo>&#x2211; <!-- ∑ -->
+                            </mo>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <msup>
+                                    <mi>l</mi>
+
+                                    <mo>&#x2032;</mo>
+                                </msup>
+                            </mrow>
+                        </munder>
+
+                        <mi>e</mi>
+                        <mi>x</mi>
+                        <mi>p</mi>
+
+                        <mo stretchy="false">[</mo>
+
+                        <munderover>
+                            <mo>&#x2211; <!-- ∑ -->
+                            </mo>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>j</mi>
+
+                                <mo>=</mo>
+
+                                <mn>1</mn>
+                            </mrow>
+
+                            <mi>m</mi>
+                        </munderover>
+                        <munderover>
+                            <mo>&#x2211; <!-- ∑ -->
+                            </mo>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>i</mi>
+
+                                <mo>=</mo>
+
+                                <mn>1</mn>
+                            </mrow>
+
+                            <mi>n</mi>
+                        </munderover>
+
+                        <msub>
+                            <mi>&#x03BB; <!-- λ -->
+                            </mi>
+                            <mi>j</mi>
+                        </msub>
+                        <msub>
+                            <mi>f</mi>
+                            <mi>j</mi>
+                        </msub>
+
+                        <mo stretchy="false">(</mo>
+
+                        <mi>s</mi>
+
+                        <mo>,</mo>
+
+                        <mi>i</mi>
+
+                        <mo>,</mo>
+
+                        <msubsup>
+                            <mi>l</mi>
+                            <mi>i</mi>
+
+                            <mo>&#x2032;</mo>
+                        </msubsup>
+
+                        <mo>,</mo>
+
+                        <msubsup>
+                            <mi>l</mi>
+
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>i</mi>
+
+                                <mo>&#x2212; <!-- − -->
+                                </mo>
+
+                                <mn>1</mn>
+                            </mrow>
+
+                            <mo>&#x2032;</mo>
+                        </msubsup>
+
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">]</mo>
+                    </mrow>
+                </mfrac>
+            </math></item>
+        <item>\\int_a^b f(x)\\, dx = F(b) - F(a)\\ \\text{where}\\ F\'(x)=f(x)</item>
+        <item>\\left[\\begin{array}{cc}\\cos\\theta &amp; \\sin\\theta \\\\ \\sin\\theta &amp; -\\cos\\theta \\end{array}\\right]</item>
+        <item>\\iint_D (\\vec\\nabla\\times\\vec F)\\cdot\\vec n\\ dS = \\oint_{\\partial D} \\vec F\\cdot d\\vec r</item>
+        <item>x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}</item>
+        <item>f(z_0)= \\frac1{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-z_0} dz</item>
+    </string-array>
+
+    <string name="links">Links: &lt;a href=\"http://www.mathjax.org\">MathJax.org&lt;/a> || &lt;a href=\"http://www.mathjax.org/docs/2.0/tex.html\">TeX support&lt;/a> || &lt;a href=\"http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm\">commands with examples&lt;/a></string>
+    <string name="title_activity_show_qs">ShowQsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
 </resources>
