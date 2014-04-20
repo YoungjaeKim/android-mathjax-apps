@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.thirteencubes.prepup.android.R;
@@ -52,12 +51,6 @@ public class ShowQsActivity extends Activity {
 		}
 		
 		onSwipeTouchListener = new OnSwipeTouchListener(getApplicationContext()) {
-			
-			/*	@Override
-			    public void onSwipeTop() {
-			        Toast.makeText(ctx, "top", Toast.LENGTH_SHORT).show();
-			    }
-				*/
 				@Override
 			    public void onSwipeRight() {
 					
@@ -83,7 +76,6 @@ public class ShowQsActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.show_qs, menu);
 		return true;
@@ -100,19 +92,6 @@ public class ShowQsActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
-	public void showRight(View view) {
-	     // Kabloey
-		// example++;
-	      //  UpdateQ();
-		
-	}
-	
-	public void showLeft(View view) {
-		 //example--;
-	       // UpdateQ();
-	}
 	
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev){
@@ -128,18 +107,11 @@ public class ShowQsActivity extends Activity {
 		
 		w.loadUrl("javascript:document.getElementById('tope').innerHTML='"
 		       + data + "';");
-		
 		//parse 
 		w.loadUrl("javascript:M.parseMath(document.getElementById('tope'));");
-		
-		//uncomment for mathjax
-		//w.loadUrl("javascript:MathJax.Hub.Queue(['Typeset',MathJax.Hub]);");
 	}
 	
 	private String getExample(int index) {
-		//return getResources().getStringArray(R.array.tex_examples)[index];
-		
-		
 		String data = SharedUtils.readFileAsString(exam.getExamId(), exam.getQIds()[index] + ".html");
 		String baseDir = SharedUtils.GetDir(exam.getExamId());
 		data = data.replace("{baseDir}", "file:///" + baseDir);
@@ -216,13 +188,6 @@ public class ShowQsActivity extends Activity {
 			
 			String eg = getExample(1);
 			
-			/*String body =  //"<span id='math' onclick='optionClicked(1)'>"+  eg + "</span>";
-			"<body><div id='q'>Qs </div>" +
-					   "<div id='option1' onclick='optionClicked(1)'> " + eg + "</div>" +
-					   "<div id='option2' onclick='optionClicked(2)'>"+ eg  +"</div>" +
-					   "<div id='option3' onclick='optionClicked(3)'> </div>" +
-					   "<div id='option4' onclick='optionClicked(4)'> </div></body>"; 
-				*/
 			String data = getExample(0);
 			String body = "<body><div id='tope'>" + data + "</div></body>";
 					
@@ -235,21 +200,6 @@ public class ShowQsActivity extends Activity {
 			+ " <script src='file:///android_asset/mathscribe/jqmath-etc-0.4.0.min.js'></script>"
 			//+ "<script>M.MathPlayer = false;</script>"
 			;
-
-		/*	String scriptInc = 
-					"<script type='text/x-mathjax-config'>"
-		                      +"MathJax.Hub.Config({ " 
-							  	+"showMathMenu: false, "
-							  	+"jax: ['input/TeX','output/HTML-CSS'], "
-							  	+"extensions: ['tex2jax.js'], " 
-							  	+"TeX: { extensions: ['AMSmath.js','AMSsymbols.js',"
-							  	  +"'noErrors.js','noUndefined.js'] } "
-							  +"});</script>"
-		                      +"<script type='text/javascript' "
-							  +"src='file:///android_asset/MathJax/MathJax.js'"
-							  +"></script>" ;
-			*/		
-		//	w.loadUrl("file:///android_asset/mathscribe/COPY-ME.html");
 			String content = "<html><head>" +
 					scriptInc +
 					  "<script type='text/javascript'>" +
@@ -269,17 +219,6 @@ public class ShowQsActivity extends Activity {
 			Log.e("Mathqq", content); 
 			w.loadDataWithBaseURL("http://bar", content,"text/html","utf-8","");
 			example = 0;
-			//UpdateQ();
-
-			
-			
-			    
-			   /* public void onSwipeBottom() {
-			        Toast.makeText(ctx, "bottom", Toast.LENGTH_SHORT).show();
-			    }*/
-			  			
-
-			//w.setOnTouchListener(onSwipeTouchListener);
 			return rootView;
 		}
 		
@@ -309,29 +248,12 @@ public class ShowQsActivity extends Activity {
 			String data = getExample(example);
 			w.loadUrl("javascript:document.getElementById('tope').innerHTML='"
 			        + data + "';");
-			
 			//parse 
 			w.loadUrl("javascript:M.parseMath(document.getElementById('tope'));");
 			
-			/*w.loadUrl("javascript:document.getElementById('option1').innerHTML='\\\\["
-			        + data  
-					//+doubleEscapeTeX(data)
-					  +"\\\\]';");
-			w.loadUrl("javascript:document.getElementById('option3').innerHTML='"
-			        + data + "';");
-			
-			//parse 
-			w.loadUrl("javascript:M.parseMath(document.getElementById('option3'));");
-			*/
-			
-			//uncomment for mathjax
-			//w.loadUrl("javascript:MathJax.Hub.Queue(['Typeset',MathJax.Hub]);");
 		}
 		
 		private String getExample(int index) {
-			//return getResources().getStringArray(R.array.tex_examples)[index];
-			
-			
 			String data = SharedUtils.readFileAsString(exam.getExamId(), exam.getQIds()[index] + ".html");
 			String baseDir = SharedUtils.GetDir(exam.getExamId());
 			data = data.replace("{baseDir}", "file:///" + baseDir);
