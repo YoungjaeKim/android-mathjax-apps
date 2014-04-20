@@ -7,18 +7,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.jsu.leathrum.android.mathjaxapp.full.ShowQsActivity$PlaceholderFragment" >
+    tools:context="com.thirteencubes.prepup.android.core.ShowQsActivity$PlaceholderFragment" >
 
-    <TextView
-        android:id="@+id/textbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
+    <!--  <Buttons
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  
+         android:id="@+id/leftbutton"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:text="@string/left_button"
+     android:layout_alignParentLeft="true" 
+     android:onClick="showLeft" />
+     
+      <Button
+          android:id="@+id/rightbutton"
+     android:layout_height="wrap_content"
+     android:layout_width="fill_parent"
+     android:text="@string/right_button"
+     android:layout_alignParentRight="true" 
+     android:onClick="showRight" />
+      
+      </RelativeLayout>
+       -->
+       
     <WebView
 		android:id="@+id/webview1"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbarStyle="outsideOverlay"
 		/>	
 		
 </LinearLayout>

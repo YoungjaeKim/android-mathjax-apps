@@ -3,9 +3,6 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.thirteencubes.prepup.android.core.ShowQsActivity"
-    tools:ignore="MergeRootFrame" >
-    
-    
-    </FrameLayout>
+    tools:context="com.thirteencubes.prepup.android.core.StartExamActivity"
+    tools:ignore="MergeRootFrame" />
 

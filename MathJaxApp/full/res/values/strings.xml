@@ -1,295 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MathJax App - Full</string>
+    <string name="app_name">Prep Up</string>
     <string name="enter_tex">Enter TeX here:</string>
     <string name="show">Show</string>
     <string name="clear">Clear</string>
     <string name="example">Example</string>
+    <string name="welcome_msg">Welcome to CompeteUp. Select the exam to practise for!</string>
+    <string name="start_exam_button_text">Start</string>
 
     <string-array name="tex_examples">
         <item>\\int_{-\\infty}^{\\infty} e^{-x^2}\\, dx = \\sqrt{\\pi}</item>
-        <item><math display="block">
-                <mrow>
-                    <mi mathvariant="normal">&amp;pi;</mi>
+        <item>&lt;math&gt;&lt;mrow&gt;
+                    &lt;mi&gt;&amp;pi;&lt;/mi&gt;
 
-                    <mo>≈</mo>
+                    &lt;mo&gt;≈&lt;/mo&gt;
 
-                    <mfrac>
-                        <mn>355</mn>
-                        <mn>113</mn>
-                    </mfrac>
-                </mrow>
-            </math></item>
+                    &lt;mfrac&gt;
+                        &lt;mn&gt;355&lt;/mn&gt;
+                        &lt;mn&gt;113&lt;/mn&gt;
+                    &lt;/mfrac&gt;
+                &lt;/mrow&gt;
+            &lt;/math&gt;</item>
         <item>\\sum_{n=1}^{\\infty}\\frac1{n^2}=\\frac{\\pi^2}6</item>
-        <item><math>
-                <mi>p</mi>
+        <item>&lt;math&gt;
+                &lt;mi&gt;p&lt;/mi&gt;
 
-                <mo stretchy="false">(</mo>
+                &lt;mo stretchy="false"&gt;(&lt;/mo&gt;
 
-                <mi>l</mi>
+                &lt;mi&gt;l&lt;/mi&gt;
 
-                <mrow class="MJX-TeXAtom-ORD">
-                    <mo stretchy="false">|</mo>
-                </mrow>
+                &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                    &lt;mo stretchy="false"&gt;|&lt;/mo&gt;
+                &lt;/mrow&gt;
 
-                <mi>s</mi>
+                &lt;mi&gt;s&lt;/mi&gt;
 
-                <mo stretchy="false">)</mo>
-                <mo>=</mo>
+                &lt;mo stretchy="false"&gt;)&lt;/mo&gt;
+                &lt;mo&gt;=&lt;/mo&gt;
 
-                <mfrac>
-                    <mrow>
-                        <mi>e</mi>
-                        <mi>x</mi>
-                        <mi>p</mi>
+                &lt;mfrac&gt;
+                    &lt;mrow&gt;
+                        &lt;mi&gt;e&lt;/mi&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mi&gt;p&lt;/mi&gt;
 
-                        <mo stretchy="false">[</mo>
+                        &lt;mo stretchy="false"&gt;[&lt;/mo&gt;
 
-                        <mi>s</mi>
-                        <mi>c</mi>
-                        <mi>o</mi>
-                        <mi>r</mi>
-                        <mi>e</mi>
+                        &lt;mi&gt;s&lt;/mi&gt;
+                        &lt;mi&gt;c&lt;/mi&gt;
+                        &lt;mi&gt;o&lt;/mi&gt;
+                        &lt;mi&gt;r&lt;/mi&gt;
+                        &lt;mi&gt;e&lt;/mi&gt;
 
-                        <mo stretchy="false">(</mo>
+                        &lt;mo stretchy="false"&gt;(&lt;/mo&gt;
 
-                        <mi>l</mi>
+                        &lt;mi&gt;l&lt;/mi&gt;
 
-                        <mrow class="MJX-TeXAtom-ORD">
-                            <mo stretchy="false">|</mo>
-                        </mrow>
+                        &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                            &lt;mo stretchy="false"&gt;|&lt;/mo&gt;
+                        &lt;/mrow&gt;
 
-                        <mi>s</mi>
+                        &lt;mi&gt;s&lt;/mi&gt;
 
-                        <mo stretchy="false">)</mo>
-                        <mo stretchy="false">]</mo>
-                    </mrow>
-                    <mrow>
-                        <munder>
-                            <mo>&#x2211; <!-- ∑ -->
-                            </mo>
+                        &lt;mo stretchy="false"&gt;)&lt;/mo&gt;
+                        &lt;mo stretchy="false"&gt;]&lt;/mo&gt;
+                    &lt;/mrow&gt;
+                    &lt;mrow&gt;
+                        &lt;munder&gt;
+                            &lt;mo&gt;&#x2211; &lt;!-- ∑ --&gt;
+                            &lt;/mo&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <msup>
-                                    <mi>l</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;msup&gt;
+                                    &lt;mi&gt;l&lt;/mi&gt;
 
-                                    <mo>&#x2032;</mo>
-                                </msup>
-                            </mrow>
-                        </munder>
+                                    &lt;mo&gt;&#x2032;&lt;/mo&gt;
+                                &lt;/msup&gt;
+                            &lt;/mrow&gt;
+                        &lt;/munder&gt;
 
-                        <mi>e</mi>
-                        <mi>x</mi>
-                        <mi>p</mi>
+                        &lt;mi&gt;e&lt;/mi&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mi&gt;p&lt;/mi&gt;
 
-                        <mo stretchy="false">[</mo>
+                        &lt;mo stretchy="false"&gt;[&lt;/mo&gt;
 
-                        <mi>s</mi>
-                        <mi>c</mi>
-                        <mi>o</mi>
-                        <mi>r</mi>
-                        <mi>e</mi>
+                        &lt;mi&gt;s&lt;/mi&gt;
+                        &lt;mi&gt;c&lt;/mi&gt;
+                        &lt;mi&gt;o&lt;/mi&gt;
+                        &lt;mi&gt;r&lt;/mi&gt;
+                        &lt;mi&gt;e&lt;/mi&gt;
 
-                        <mo stretchy="false">(</mo>
+                        &lt;mo stretchy="false"&gt;(&lt;/mo&gt;
 
-                        <msup>
-                            <mi>l</mi>
+                        &lt;msup&gt;
+                            &lt;mi&gt;l&lt;/mi&gt;
 
-                            <mo>&#x2032;</mo>
-                        </msup>
+                            &lt;mo&gt;&#x2032;&lt;/mo&gt;
+                        &lt;/msup&gt;
 
-                        <mrow class="MJX-TeXAtom-ORD">
-                            <mo stretchy="false">|</mo>
-                        </mrow>
+                        &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                            &lt;mo stretchy="false"&gt;|&lt;/mo&gt;
+                        &lt;/mrow&gt;
 
-                        <mi>s</mi>
+                        &lt;mi&gt;s&lt;/mi&gt;
 
-                        <mo stretchy="false">)</mo>
-                        <mo stretchy="false">]</mo>
-                    </mrow>
-                </mfrac>
+                        &lt;mo stretchy="false"&gt;)&lt;/mo&gt;
+                        &lt;mo stretchy="false"&gt;]&lt;/mo&gt;
+                    &lt;/mrow&gt;
+                &lt;/mfrac&gt;
 
-                <mo>=</mo>
+                &lt;mo&gt;=&lt;/mo&gt;
 
-                <mfrac>
-                    <mrow>
-                        <mi>e</mi>
-                        <mi>x</mi>
-                        <mi>p</mi>
+                &lt;mfrac&gt;
+                    &lt;mrow&gt;
+                        &lt;mi&gt;e&lt;/mi&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mi&gt;p&lt;/mi&gt;
 
-                        <mo stretchy="false">[</mo>
+                        &lt;mo stretchy="false"&gt;[&lt;/mo&gt;
 
-                        <munderover>
-                            <mo>&#x2211; <!-- ∑ -->
-                            </mo>
+                        &lt;munderover&gt;
+                            &lt;mo&gt;&#x2211; &lt;!-- ∑ --&gt;
+                            &lt;/mo&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <mi>j</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;mi&gt;j&lt;/mi&gt;
 
-                                <mo>=</mo>
+                                &lt;mo&gt;=&lt;/mo&gt;
 
-                                <mn>1</mn>
-                            </mrow>
+                                &lt;mn&gt;1&lt;/mn&gt;
+                            &lt;/mrow&gt;
 
-                            <mi>m</mi>
-                        </munderover>
-                        <munderover>
-                            <mo>&#x2211; <!-- ∑ -->
-                            </mo>
+                            &lt;mi&gt;m&lt;/mi&gt;
+                        &lt;/munderover&gt;
+                        &lt;munderover&gt;
+                            &lt;mo&gt;&#x2211; &lt;!-- ∑ --&gt;
+                            &lt;/mo&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <mi>i</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;mi&gt;i&lt;/mi&gt;
 
-                                <mo>=</mo>
+                                &lt;mo&gt;=&lt;/mo&gt;
 
-                                <mn>1</mn>
-                            </mrow>
+                                &lt;mn&gt;1&lt;/mn&gt;
+                            &lt;/mrow&gt;
 
-                            <mi>n</mi>
-                        </munderover>
+                            &lt;mi&gt;n&lt;/mi&gt;
+                        &lt;/munderover&gt;
 
-                        <msub>
-                            <mi>&#x03BB; <!-- λ -->
-                            </mi>
-                            <mi>j</mi>
-                        </msub>
-                        <msub>
-                            <mi>f</mi>
-                            <mi>j</mi>
-                        </msub>
+                        &lt;msub&gt;
+                            &lt;mi&gt;&#x03BB; &lt;!-- λ --&gt;
+                            &lt;/mi&gt;
+                            &lt;mi&gt;j&lt;/mi&gt;
+                        &lt;/msub&gt;
+                        &lt;msub&gt;
+                            &lt;mi&gt;f&lt;/mi&gt;
+                            &lt;mi&gt;j&lt;/mi&gt;
+                        &lt;/msub&gt;
 
-                        <mo stretchy="false">(</mo>
+                        &lt;mo stretchy="false"&gt;(&lt;/mo&gt;
 
-                        <mi>s</mi>
+                        &lt;mi&gt;s&lt;/mi&gt;
 
-                        <mo>,</mo>
+                        &lt;mo&gt;,&lt;/mo&gt;
 
-                        <mi>i</mi>
+                        &lt;mi&gt;i&lt;/mi&gt;
 
-                        <mo>,</mo>
+                        &lt;mo&gt;,&lt;/mo&gt;
 
-                        <msub>
-                            <mi>l</mi>
-                            <mi>i</mi>
-                        </msub>
+                        &lt;msub&gt;
+                            &lt;mi&gt;l&lt;/mi&gt;
+                            &lt;mi&gt;i&lt;/mi&gt;
+                        &lt;/msub&gt;
 
-                        <mo>,</mo>
+                        &lt;mo&gt;,&lt;/mo&gt;
 
-                        <msub>
-                            <mi>l</mi>
+                        &lt;msub&gt;
+                            &lt;mi&gt;l&lt;/mi&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <mi>i</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;mi&gt;i&lt;/mi&gt;
 
-                                <mo>&#x2212; <!-- − -->
-                                </mo>
+                                &lt;mo&gt;&#x2212; &lt;!-- − --&gt;
+                                &lt;/mo&gt;
 
-                                <mn>1</mn>
-                            </mrow>
-                        </msub>
+                                &lt;mn&gt;1&lt;/mn&gt;
+                            &lt;/mrow&gt;
+                        &lt;/msub&gt;
 
-                        <mo stretchy="false">)</mo>
-                        <mo stretchy="false">]</mo>
-                    </mrow>
-                    <mrow>
-                        <munder>
-                            <mo>&#x2211; <!-- ∑ -->
-                            </mo>
+                        &lt;mo stretchy="false"&gt;)&lt;/mo&gt;
+                        &lt;mo stretchy="false"&gt;]&lt;/mo&gt;
+                    &lt;/mrow&gt;
+                    &lt;mrow&gt;
+                        &lt;munder&gt;
+                            &lt;mo&gt;&#x2211; &lt;!-- ∑ --&gt;
+                            &lt;/mo&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <msup>
-                                    <mi>l</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;msup&gt;
+                                    &lt;mi&gt;l&lt;/mi&gt;
 
-                                    <mo>&#x2032;</mo>
-                                </msup>
-                            </mrow>
-                        </munder>
+                                    &lt;mo&gt;&#x2032;&lt;/mo&gt;
+                                &lt;/msup&gt;
+                            &lt;/mrow&gt;
+                        &lt;/munder&gt;
 
-                        <mi>e</mi>
-                        <mi>x</mi>
-                        <mi>p</mi>
+                        &lt;mi&gt;e&lt;/mi&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mi&gt;p&lt;/mi&gt;
 
-                        <mo stretchy="false">[</mo>
+                        &lt;mo stretchy="false"&gt;[&lt;/mo&gt;
 
-                        <munderover>
-                            <mo>&#x2211; <!-- ∑ -->
-                            </mo>
+                        &lt;munderover&gt;
+                            &lt;mo&gt;&#x2211; &lt;!-- ∑ --&gt;
+                            &lt;/mo&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <mi>j</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;mi&gt;j&lt;/mi&gt;
 
-                                <mo>=</mo>
+                                &lt;mo&gt;=&lt;/mo&gt;
 
-                                <mn>1</mn>
-                            </mrow>
+                                &lt;mn&gt;1&lt;/mn&gt;
+                            &lt;/mrow&gt;
 
-                            <mi>m</mi>
-                        </munderover>
-                        <munderover>
-                            <mo>&#x2211; <!-- ∑ -->
-                            </mo>
+                            &lt;mi&gt;m&lt;/mi&gt;
+                        &lt;/munderover&gt;
+                        &lt;munderover&gt;
+                            &lt;mo&gt;&#x2211; &lt;!-- ∑ --&gt;
+                            &lt;/mo&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <mi>i</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;mi&gt;i&lt;/mi&gt;
 
-                                <mo>=</mo>
+                                &lt;mo&gt;=&lt;/mo&gt;
 
-                                <mn>1</mn>
-                            </mrow>
+                                &lt;mn&gt;1&lt;/mn&gt;
+                            &lt;/mrow&gt;
 
-                            <mi>n</mi>
-                        </munderover>
+                            &lt;mi&gt;n&lt;/mi&gt;
+                        &lt;/munderover&gt;
 
-                        <msub>
-                            <mi>&#x03BB; <!-- λ -->
-                            </mi>
-                            <mi>j</mi>
-                        </msub>
-                        <msub>
-                            <mi>f</mi>
-                            <mi>j</mi>
-                        </msub>
+                        &lt;msub&gt;
+                            &lt;mi&gt;&#x03BB; &lt;!-- λ --&gt;
+                            &lt;/mi&gt;
+                            &lt;mi&gt;j&lt;/mi&gt;
+                        &lt;/msub&gt;
+                        &lt;msub&gt;
+                            &lt;mi&gt;f&lt;/mi&gt;
+                            &lt;mi&gt;j&lt;/mi&gt;
+                        &lt;/msub&gt;
 
-                        <mo stretchy="false">(</mo>
+                        &lt;mo stretchy="false"&gt;(&lt;/mo&gt;
 
-                        <mi>s</mi>
+                        &lt;mi&gt;s&lt;/mi&gt;
 
-                        <mo>,</mo>
+                        &lt;mo&gt;,&lt;/mo&gt;
 
-                        <mi>i</mi>
+                        &lt;mi&gt;i&lt;/mi&gt;
 
-                        <mo>,</mo>
+                        &lt;mo&gt;,&lt;/mo&gt;
 
-                        <msubsup>
-                            <mi>l</mi>
-                            <mi>i</mi>
+                        &lt;msubsup&gt;
+                            &lt;mi&gt;l&lt;/mi&gt;
+                            &lt;mi&gt;i&lt;/mi&gt;
 
-                            <mo>&#x2032;</mo>
-                        </msubsup>
+                            &lt;mo&gt;&#x2032;&lt;/mo&gt;
+                        &lt;/msubsup&gt;
 
-                        <mo>,</mo>
+                        &lt;mo&gt;,&lt;/mo&gt;
 
-                        <msubsup>
-                            <mi>l</mi>
+                        &lt;msubsup&gt;
+                            &lt;mi&gt;l&lt;/mi&gt;
 
-                            <mrow class="MJX-TeXAtom-ORD">
-                                <mi>i</mi>
+                            &lt;mrow class="MJX-TeXAtom-ORD"&gt;
+                                &lt;mi&gt;i&lt;/mi&gt;
 
-                                <mo>&#x2212; <!-- − -->
-                                </mo>
+                                &lt;mo&gt;&#x2212; &lt;!-- − --&gt;
+                                &lt;/mo&gt;
 
-                                <mn>1</mn>
-                            </mrow>
+                                &lt;mn&gt;1&lt;/mn&gt;
+                            &lt;/mrow&gt;
 
-                            <mo>&#x2032;</mo>
-                        </msubsup>
+                            &lt;mo&gt;&#x2032;&lt;/mo&gt;
+                        &lt;/msubsup&gt;
 
-                        <mo stretchy="false">)</mo>
-                        <mo stretchy="false">]</mo>
-                    </mrow>
-                </mfrac>
-            </math></item>
+                        &lt;mo stretchy="false"&gt;)&lt;/mo&gt;
+                        &lt;mo stretchy="false"&gt;]&lt;/mo&gt;
+                    &lt;/mrow&gt;
+                &lt;/mfrac&gt;
+            &lt;/math&gt;</item>
         <item>\\int_a^b f(x)\\, dx = F(b) - F(a)\\ \\text{where}\\ F\'(x)=f(x)</item>
         <item>\\left[\\begin{array}{cc}\\cos\\theta &amp; \\sin\\theta \\\\ \\sin\\theta &amp; -\\cos\\theta \\end{array}\\right]</item>
         <item>\\iint_D (\\vec\\nabla\\times\\vec F)\\cdot\\vec n\\ dS = \\oint_{\\partial D} \\vec F\\cdot d\\vec r</item>
@@ -301,5 +302,8 @@
     <string name="title_activity_show_qs">ShowQsActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="left_button">&lt; </string>
+    <string name="right_button">&gt;</string>
+    <string name="title_activity_start_exam">StartExamActivity</string>
 
 </resources>
