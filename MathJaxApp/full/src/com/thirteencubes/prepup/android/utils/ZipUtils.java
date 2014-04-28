@@ -84,12 +84,19 @@ public final class ZipUtils {
                 }
                 continue;
             }
-
+            
+            newFile.mkdirs();
+            
+            
             if (listener != null) {
                 int progress = (item == itemCount) ? 100 : (int) (((double) (item * 100)) / (double) (itemCount));
                 listener.onUnzipping(fileName, progress);
             }
-
+            
+            if (newFile.exists()) {
+            	newFile.delete();
+            }
+            
             FileOutputStream fos = new FileOutputStream(newFile);
 
             try {

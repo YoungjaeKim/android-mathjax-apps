@@ -70,7 +70,7 @@ implements View.OnClickListener
 		setContentView(R.layout.main);
 		WebView w = (WebView) findViewById(R.id.webview);
 		w.getSettings().setJavaScriptEnabled(true);
-		w.addJavascriptInterface(new WebAppInterface(this), "Android");
+		//w.addJavascriptInterface(new WebAppInterface(this), "Android");
 		w.getSettings().setBuiltInZoomControls(true);
 		w.loadDataWithBaseURL("http://bar", "<script type='text/x-mathjax-config'>"
 		                      +"MathJax.Hub.Config({ " 

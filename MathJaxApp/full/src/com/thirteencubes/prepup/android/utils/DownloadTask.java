@@ -9,6 +9,8 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
+import com.thirteencubes.prepup.android.core.ShowQsActivity;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -24,9 +26,14 @@ public class DownloadTask extends AsyncTask<Integer, Integer, Void>{
     SharedPreferences.Editor editor;
     Context context;
     String subDir;
-    public DownloadTask(Context context, String examId){
+    String[] fileNames;
+    String baseUrl;
+    
+    public DownloadTask(Context context, String subDir, String baseUrl, String[] fileNames){
         this.context = context;
-        this.subDir = examId;
+        this.subDir = subDir;
+        this.fileNames = fileNames;
+        this.baseUrl = baseUrl;
         //mNotificationHelper = new NotificationHelper(context);
     }
 
@@ -35,10 +42,6 @@ public class DownloadTask extends AsyncTask<Integer, Integer, Void>{
         //mNotificationHelper.createNotification();
     }
 
-    //public void StartDownload() {
-    	//doInBackground(0);
-    //}
-    
     @Override
     protected Void doInBackground(Integer... integers) {
         //This is where we would do the actual download stuff
@@ -48,60 +51,61 @@ public class DownloadTask extends AsyncTask<Integer, Integer, Void>{
     	//http://stackoverflow.com/questions/15542641/how-to-show-download-progress-in-progress-bar-in-android
         //http://stackoverflow.com/questions/12689992/progressbar-during-download-with-downloadmanager-and-sleeping-thread-in-android
     	int count;
-
-        try {
-
-        	URL url = new URL("http://apiv1.wellmob.com/doc6.zip");
-//	        URL url = new URL("http://apiv1.wellmob.com/app/?q=prevyrtest");
-	        URLConnection conexion = url.openConnection();
-	        conexion.connect();
-	
-	        int lenghtOfFile = conexion.getContentLength();
-	        Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
-	
-	        InputStream input = new BufferedInputStream(url.openStream());
-	        File dir = SharedUtils.GetDownloadDirFile(subDir);
-	        //OutputStream output = new FileOutputStream("/sdcard/foldername/temp.zip");
-	        File file = new File(dir, "test.zip"); 
-	        
-	        if(!dir.exists())
-	         {
-	           dir.mkdir();
-	         }
-	        OutputStream output = new FileOutputStream(file);
-	       // OutputStream output = context.openFileOutput("test.zip", Context.MODE_PRIVATE);
-	        byte data[] = new byte[1024];
-	
-	        long total = 0;
-		        try {
-		            while ((count = input.read(data)) != -1) {
-		                total += count;
-		                //publishProgress(""+(int)((total*100)/lenghtOfFile));
-		                Log.d("%Percentage%",""+(int)((total*100)/lenghtOfFile));
-		                onProgressUpdate((int)((total*100)/lenghtOfFile));
-		                output.write(data, 0, count);
-		            }
+    	File dir = SharedUtils.GetDownloadDirFile(subDir);
+        
+    	for(int i = 0; i < fileNames.length; i++) {
+	        try {
+	        	File file = new File(dir, fileNames[i]); 
+			      
+	        	if (!file.exists())
+	        	{
+		        	URL url = new URL(baseUrl + "/" + fileNames[i]);
+		//	        URL url = new URL("http://apiv1.wellmob.com/app/?q=prevyrtest");
+			        URLConnection conexion = url.openConnection();
+			        conexion.connect();
+			
+			        int lenghtOfFile = conexion.getContentLength();
+			        Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
+			
+			        InputStream input = new BufferedInputStream(url.openStream());
+			        //OutputStream output = new FileOutputStream("/sdcard/foldername/temp.zip");
+			        
+			        if(!dir.exists())
+			         {
+			           dir.mkdir();
+			         }
+			        OutputStream output = new FileOutputStream(file);
+			       // OutputStream output = context.openFileOutput("test.zip", Context.MODE_PRIVATE);
+			        byte data[] = new byte[1024];
+			
+			        long total = 0;
+				        try {
+				            while ((count = input.read(data)) != -1) {
+				                total += count;
+				                //publishProgress(""+(int)((total*100)/lenghtOfFile));
+				                Log.d("%Percentage%",""+(int)((total*100)/lenghtOfFile));
+				                onProgressUpdate((int)((total*100)/lenghtOfFile));
+				                output.write(data, 0, count);
+				            }
+				
+				            output.flush();
+				            output.close();
+				            input.close();
+				           
+				            ZipUtils.unzip(file, dir);
+		                    settings = this.context.getSharedPreferences(PEFERENCE_FILE, 0);
+		                    editor = settings.edit();
+		                    editor.putBoolean(ISDOWNLOADED, true);
+		                    editor.commit();
 		
-		            output.flush();
-		            output.close();
-		            input.close();
-		           // File file = //context.getFileStreamPath("test.zip");
-		         //   File file = new File(Environment.getExternalStorageDirectory() + "/testprep/"+"test.zip"); 
-		           // File path = context.getFilesDir(); //new File(Environment.getExternalStorageDirectory()
-		                    //+ "/foldername"); 
-		            //File path = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "/testprep/");
-                    ZipUtils.unzip(file, dir);
-                    settings = this.context.getSharedPreferences(PEFERENCE_FILE, 0);
-                    editor = settings.edit();
-                    editor.putBoolean(ISDOWNLOADED, true);
-                    editor.commit();
-
-		        } catch (IOException e) {
-		                Log.d("ZIP UTILL",e.toString());
-		        	}
-	
-        } catch (Exception e) {}
-
+				        } catch (IOException e) {
+				        	CustomLogger.getLogger(DownloadTask.class).error(e.toString());
+				        }
+	        	}
+	        } catch (Exception e) {
+	        	CustomLogger.getLogger(DownloadTask.class).error(e.toString());
+	        }
+    	}
 
         return null;
     }

@@ -6,6 +6,12 @@
     tools:context="com.thirteencubes.prepup.android.core.ShowQsActivity"
     tools:ignore="MergeRootFrame" >
     
+      <WebView
+		android:id="@+id/webview1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbarStyle="outsideOverlay"
+		/>	  
     
     </FrameLayout>
 

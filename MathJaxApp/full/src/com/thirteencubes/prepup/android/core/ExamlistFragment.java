@@ -45,7 +45,6 @@ public class ExamlistFragment extends ListFragment {
 	        // getMenuCategories returns global arraylist which is initialized in GlobalList class
 	        examList = ExamInfo.getSampleExamItems() ;//GlobalList.getMenuCategories().get(num).getMenu();
 	        
-	        
 	        final ExamlistAdaptor mAdapter1 = new ExamlistAdaptor(getActivity(), android.R.id.list, examList);
 	       listView.setAdapter(mAdapter1);
 	    }
@@ -53,14 +52,17 @@ public class ExamlistFragment extends ListFragment {
 	    @Override
 	    public void onListItemClick (ListView l, View v, int position, long id) {
 	    	String examName = examList.get(position).getExamName();
-	    	String examId = examList.get(position).getExamId();
+	    	String testId = examList.get(position).getTestId();
 	    	Toast toast = Toast.makeText(getActivity().getApplicationContext(), examName, Toast.LENGTH_SHORT);
 	    	toast.show();
 	    	
 	    	Intent i = new Intent(getActivity().getApplicationContext(), StartExamActivity.class);
 	    	i.putExtra("position", position);
 	    	//i.putExtra("examId", examId);
-	    	DownloadTask task = new DownloadTask(getActivity().getApplicationContext(), examId);
+	    	DownloadTask task = new DownloadTask(getActivity().getApplicationContext()
+	    			, testId
+	    			, "http://apiv1.wellmob.com/"
+	    			, examList.get(position).getFileNamesToDownload());
 	    	task.execute(0);
 	    	startActivity(i);
 	    }
